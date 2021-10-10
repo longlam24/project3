@@ -6,13 +6,9 @@ pipeline {
                 echo 'Running build automation'
             }
         }
-        stage('push') {
+        stage('Push') {
             steps {
                 echo 'Running build automation'
-                sh 'ssh -T -i ec2-user@18.162.44.113 /home/ec2-user/key.pem'
-                sh 'cd /var/www/html/servedemo'
-                sh 'git pull'
-
             }
         }
         stage('Deploy') {
