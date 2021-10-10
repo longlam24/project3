@@ -6,7 +6,7 @@ pipeline {
                 echo 'Running build automation'
             }
         }
-        stage('Build') {
+        stage('push') {
             steps {
                 echo 'Running build automation'
                 sh 'ssh -T -i ec2-user@18.162.44.113 /home/ec2-user/key.pem'
